@@ -1,6 +1,7 @@
 
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button'
+import Card from 'react-bootstrap/Card'
+import ItemCount from '../ItemCount/ItemCount'
 
 function Item({item}) {
   return (
@@ -15,6 +16,8 @@ function Item({item}) {
           {item.price}
         </Card.Text>
         <Button variant="primary">Ver mas</Button>
+        <ItemCount initial={1} stock={10} onAdd={(quantity) => console.log('Cantidad agregada ',quantity)
+       }/>
       </Card.Body>
     </Card>
   );

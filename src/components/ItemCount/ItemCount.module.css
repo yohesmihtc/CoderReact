@@ -1,0 +1,22 @@
+.Counter{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Controls{
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    margin: 5px;    
+}
+
+.Number{
+    margin: 0 10px;
+
+}
+.Button{
+    border-radius: 5px;
+    padding: 0 10px;
+}
+
