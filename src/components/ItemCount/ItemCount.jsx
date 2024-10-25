@@ -36,6 +36,8 @@ const ItemCount = ({stock, initial,onAdd})=> {
                 </button>
             </div>
 
+            
+
         </div>
     )
 }

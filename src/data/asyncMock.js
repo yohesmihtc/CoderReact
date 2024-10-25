@@ -1,4 +1,4 @@
-export const products = [
+const products = [
     {
       id: 1,
       name: "T-shirt Blanco",
@@ -89,5 +89,21 @@ export const products = [
       img: "https://yaoca.com/cdn/shop/products/arte1.jpg?v=1704416955",
       category: "Proteinas"
     }
-  ];
+  ]
+
+export const getProducts = () => {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(products)
+    }, 500)
+  })
+}
+
+export const getProductById = (productId) => {
+  return new Promise ((resolve) =>{
+    setTimeout((resolve) => {
+      resolve(products.find(item => item.id === productId))
+    }, 500)
+  })
+}
   

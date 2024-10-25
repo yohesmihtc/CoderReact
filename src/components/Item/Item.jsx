@@ -1,7 +1,7 @@
-
 import Button from 'react-bootstrap/Button'
 import Card from 'react-bootstrap/Card'
 import ItemCount from '../ItemCount/ItemCount'
+import { Link } from 'react-router-dom';
 
 function Item({item}) {
   return (
@@ -15,12 +15,11 @@ function Item({item}) {
         <Card.Text>
           {item.price}
         </Card.Text>
-        <Button variant="primary">Ver mas</Button>
-        <ItemCount initial={1} stock={10} onAdd={(quantity) => console.log('Cantidad agregada ',quantity)
-       }/>
+        <Button variant="outline-dark" as={Link} to={`/item/${item.id}`}>Ver mas</Button>
+        
       </Card.Body>
     </Card>
   );
 }
 
-export default Item;
+export default Item

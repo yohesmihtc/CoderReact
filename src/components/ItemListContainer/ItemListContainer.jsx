@@ -1,30 +1,38 @@
 import { useState, useEffect } from "react"
 import { useParams } from "react-router-dom"
-import { products } from "../../data/products"
+import { getProducts } from "../../data/asyncMock"
 import ItemList from "../ItemList/Itemlist"
 
-function ItemListContainer () {
-    const [items, setItems]= useState([])
-    const { id }= useParams()
+function ItemListContainer ({items}) {
+    const [products, setProducts] = useState([])
 
-    console.log(id)
+    const {categoryId} = useParams()
 
-    const getProducts = () => new Promise((res, rej) => {
-        if (products.length == 0){
-            rej('el array esta vacio')
-        }
-        setTimeout(() => {
-          res(products)
-        }, 3000)
-      })
+    useEffect(() => {
+        const assynFunc = categoryId ? getProductsByCategory : getProducts
+
+        assynFunc(categoryId)
+        .then(response =>{
+            setProducts(response)
+        })
+        .catch(error => {
+            console.error(error)
+        })
+    }, [categoryId])
 
     useEffect(() =>{
         getProducts()
-        .then(res => setItems(res))
-    },[])
+        .then(response =>{
+            setProducts(response)
+        })
+        .catch(error =>{
+            console.log(error)
+        }
+        )
+    }, [])
 
     return(
-            <ItemList items={items}/> 
+            <ItemList items={products}/> 
     )
 }
 
