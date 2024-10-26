@@ -1,27 +1,21 @@
 import CartWidget from "../CartWidget/CardWidget"
-import Container from 'react-bootstrap/Container'
-import Nav from 'react-bootstrap/Nav'
-import Navbar from 'react-bootstrap/Navbar'
-import {Link} from 'react-router-dom'
+import {NavLink, Link} from 'react-router-dom'
 
-function NavBar() {
+const NavBar = () => {
   return (
-    <Navbar expand="lg" className="bg-body-tertiary">
-      <Container>
-        <Navbar.Brand as={Link} to='/'>TSL</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
-            <Nav.Link as={Link} to='/category/t-shirts'>T-shirts</Nav.Link>
-            <Nav.Link as={Link} to='/category/garrafas'>Garrafas</Nav.Link>
-            <Nav.Link as={Link} to='/category/proteinas'>Proteinas</Nav.Link>  
+    <nav className="Navbar">
+      <Link to='/'>
+      <h3>TSL</h3>
+      </Link>
+      <div className="Categories">
+        <NavLink to={`/category/t-shirts`} className={({ isActive}) => isActive? 'ActiveOption': 'Option' }>T-shirts</NavLink>
+        <NavLink to={`/category/garrafas`} className={({ isActive}) => isActive? 'ActiveOption': 'Option' }>Garrafas</NavLink>
+        <NavLink to={`/category/proteinas`} className={({ isActive}) => isActive? 'ActiveOption': 'Option' }>Proteinas</NavLink>
+      </div>
+      <CartWidget/>
+    </nav>
 
-          </Nav>
-          <CartWidget/>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
-  );
+  )
 }
 
 export default NavBar
