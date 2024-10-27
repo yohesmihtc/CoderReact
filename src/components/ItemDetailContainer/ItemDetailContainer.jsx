@@ -25,11 +25,6 @@ const ItemDetailContainer = () => {
         </div>
     )
     
-    // return(
-    //     <div className="ItemDetailContainer">
-    //         <ItemDetail {...product}/>
-    //     </div>
-    // )
 }
 
 export default ItemDetailContainer
