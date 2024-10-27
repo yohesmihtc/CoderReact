@@ -2,11 +2,11 @@ import { useState, useEffect} from "react"
 import styles from './ItemCount.module.css'
 
 
-const ItemCount = ({stock, initial,onAdd})=> {
+const ItemCount = ({stock, initial, onAdd}) => {
     const [quantity, setQuantity] = useState(initial)
 
 
-    useEffect(() =>{
+    useEffect(() => {
         console.log("Se monto ItemCount")
     }, [quantity])
 

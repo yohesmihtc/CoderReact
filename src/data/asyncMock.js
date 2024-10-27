@@ -1,6 +1,6 @@
 const products = [
     {
-      id: 1,
+      id: '1',
       name: "T-shirt Blanco",
       description: "Camiseta blanca de algodón 100% cómoda y fresca.",
       price: 19.99,
@@ -9,7 +9,7 @@ const products = [
       category: "T-shirts"
     },
     {
-      id: 2,
+      id: '2',
       name: "T-shirt Negro",
       description: "Camiseta negra con diseño moderno y minimalista.",
       price: 22.99,
@@ -18,7 +18,7 @@ const products = [
       category: "T-shirts"
     },
     {
-      id: 3,
+      id: '3',
       name: "T-shirt Azul",
       description: "Camiseta azul con estampado único, ideal para el verano.",
       price: 21.99,
@@ -27,7 +27,7 @@ const products = [
       category: "T-shirts"
     },
     {
-      id: 4,
+      id: '4',
       name: "Garrafa Deportiva 1L",
       description: "Garrafa deportiva de 1 litro, ideal para mantenerte hidratado.",
       price: 12.50,
@@ -36,7 +36,7 @@ const products = [
       category: "Garrafas"
     },
     {
-      id: 5,
+      id: '5',
       name: "Garrafa Deportiva 2L",
       description: "Garrafa deportiva de 2 litros, para entrenamientos intensos.",
       price: 15.00,
@@ -45,7 +45,7 @@ const products = [
       category: "Garrafas"
     },
     {
-      id: 6,
+      id: '6',
       name: "Garrafa Premium 1.5L",
       description: "Garrafa premium con filtro integrado y capacidad de 1.5 litros.",
       price: 18.75,
@@ -54,7 +54,7 @@ const products = [
       category: "Garrafas"
     },
     {
-      id: 7,
+      id: '7',
       name: "Proteína Whey 1kg",
       description: "Proteína de suero de leche de alta calidad con 24g de proteína por porción.",
       price: 45.99,
@@ -63,7 +63,7 @@ const products = [
       category: "Proteinas"
     },
     {
-      id: 8,
+      id: '8',
       name: "Proteína Vegana 1kg",
       description: "Proteína vegana de origen vegetal, ideal para dietas plant-based.",
       price: 49.99,
@@ -72,7 +72,7 @@ const products = [
       category: "Proteinas"
     },
     {
-      id: 9,
+      id: '9',
       name: "Proteína Caseína 1kg",
       description: "Proteína de caseína de liberación lenta, ideal para tomar antes de dormir.",
       price: 47.50,
@@ -81,7 +81,7 @@ const products = [
       category: "Proteinas"
     },
     {
-      id: 10,
+      id: '10',
       name: "Proteína Isolada 900g",
       description: "Proteína isolada, alta pureza y fácil de digerir, perfecta para post-entrenamiento.",
       price: 55.99,
@@ -100,10 +100,10 @@ export const getProducts = () => {
 }
 
 export const getProductById = (productId) => {
-  return new Promise ((resolve) =>{
-    setTimeout((resolve) => {
+  return new Promise((resolve) => {
+    setTimeout(() => {
       resolve(products.find(prod => prod.id === productId))
-    }, 500)
+    })
   })
 }
   
