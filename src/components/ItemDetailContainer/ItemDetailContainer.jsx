@@ -19,11 +19,17 @@ const ItemDetailContainer = () => {
     }, [itemId])
     
 
-    return(
+    return (
         <div className="ItemDetailContainer">
-            <ItemDetail {...product}/>
+            {product ? <ItemDetail {...product} /> : <p>Cargando producto...</p>}
         </div>
     )
+    
+    // return(
+    //     <div className="ItemDetailContainer">
+    //         <ItemDetail {...product}/>
+    //     </div>
+    // )
 }
 
 export default ItemDetailContainer
