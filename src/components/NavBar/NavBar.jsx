@@ -1,19 +1,19 @@
 import CartWidget from "../CartWidget/CardWidget"
-import {NavLink, Link} from 'react-router-dom'
+import { NavLink, Link } from 'react-router-dom'
+import styles from './Navbar.module.css' // Importa el CSS Module
 
 const NavBar = () => {
   return (
-    <nav className="Navbar">
-      <Link to='/'><h3>TSL</h3></Link>
-      <div className="Categories">
-        <NavLink to={`/category/t-shirts`} className={({ isActive}) => isActive? 'ActiveOption': 'Option' }>T-shirts</NavLink>
-        <NavLink to={`/category/garrafas`} className={({ isActive}) => isActive? 'ActiveOption': 'Option' }>Garrafas</NavLink>
-        <NavLink to={`/category/proteinas`} className={({ isActive}) => isActive? 'ActiveOption': 'Option' }>Proteinas</NavLink>
+    <nav className={styles.Navbar}>
+      <Link to='/'><h3 className={styles.logo}>TSL</h3></Link>
+      <div className={styles.Categories}>
+        <NavLink to={`/category/t-shirts`} className={({ isActive }) => isActive ? styles.ActiveOption : styles.Option}>T-shirts</NavLink>
+        <NavLink to={`/category/garrafas`} className={({ isActive }) => isActive ? styles.ActiveOption : styles.Option}>Garrafas</NavLink>
+        <NavLink to={`/category/proteinas`} className={({ isActive }) => isActive ? styles.ActiveOption : styles.Option}>Proteinas</NavLink>
       </div>
-      <CartWidget/>
+      <CartWidget />
     </nav>
-
-  )
+  );
 }
 
 export default NavBar

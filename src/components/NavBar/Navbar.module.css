@@ -1,0 +1,50 @@
+/* Navbar.css */
+
+.Navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #4E5242; /* Fondo oscuro para el navbar */
+    padding: 10px 20px; /* Espaciado alrededor del contenido */
+}
+
+.Navbar h3 {
+    color: #fff; /* Color del texto del logo */
+    margin: 0; /* Eliminar el margen por defecto */
+    font-size: 1.8rem; /* Tamaño de fuente del logo */
+    text-decoration: none; /* Sin subrayado en el texto */
+}
+
+.Categories {
+    display: flex;
+    gap: 15px; /* Espaciado entre las categorías */
+}
+
+.Option, .ActiveOption {
+    color: #fff; /* Color del texto */
+    text-decoration: none; /* Sin subrayado en el texto */
+    padding: 10px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s; /* Transición suave para el fondo */
+}
+
+.Option:hover {
+    background-color: #555; /* Fondo oscuro en hover */
+}
+
+.ActiveOption {
+    background-color: #777; /* Fondo más claro para la opción activa */
+}
+
+.CartWidget {
+    display: flex;
+    align-items: center;
+    color: #fff; /* Color del texto del carrito */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+}
+
+.CartWidget img {
+    width: 30px; /* Tamaño del ícono del carrito */
+    height: auto; /* Altura automática para mantener la relación */
+    margin-right: 5px; /* Espaciado entre el ícono y el texto */
+}
