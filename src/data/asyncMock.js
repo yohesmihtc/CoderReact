@@ -68,7 +68,7 @@ const products = [
       description: "Proteína vegana de origen vegetal, ideal para dietas plant-based.",
       price: 49.99,
       stock: 160,
-      img: "https://winklernutrition.cl/wp-content/uploads/2024/04/VeganEco_600px.jpg",
+      img: "https://contents.mediadecathlon.com/m6452470/k$5abab943a7cb2c44dddb2faa4eaeeed6/sq/super-vegan-protein-red-berries-and-goji-com-digezyme.jpg?format=auto&f=2400x2400",
       category: "Proteinas"
     },
     {
